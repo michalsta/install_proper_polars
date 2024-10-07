@@ -9,7 +9,7 @@ def get_polars():
     info = cpuinfo.get_cpu_info()
     if info["arch"] != "X86_64":
         return "polars"
-    if "avx2" in info["flags"]:
+    if set(["avx2", "bmi2", "movbe"]) <= set(info["flags"]):
         return "polars"
     else:
         return "polars-lts-cpu"
