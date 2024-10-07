@@ -20,7 +20,7 @@ setup(
     name='install-proper-polars',
     version='0.1',
     packages=[],
-    description='Empty package that will check for AVX2 flag, and install polars or polars-lts-cpu as appropriate',
+    description='Empty package that will check available CPU flags, and install polars or polars-lts-cpu as appropriate.',
     url="https://github.com/michalsta/install_proper_polars",
     author="Michał Startek",
     install_requires=[get_polars()],
